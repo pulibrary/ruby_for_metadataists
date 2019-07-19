@@ -1,4 +1,4 @@
-# The Ruby Programming Language
+# Ruby for Metadataists
 ## Variables
 
 Variables are used to store and manipulate values throughout an application or

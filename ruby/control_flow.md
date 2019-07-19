@@ -1,4 +1,4 @@
-# The Ruby Programming Language
+# Ruby for Metadataists
 ## Control Flow Statements
 
 Control flow statements structure the logical progression of a given Ruby script
