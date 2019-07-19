@@ -16,10 +16,13 @@ followed by the assignment operator `=`.
 
 There are various data types offered for variables in Ruby, and for the purposes
 of this workshop, we are only going to provide an overview of the following:
+ - Nil
  - Strings
  - Numbers
+ - Booleans
  - Arrays
  - Hashes
+ - Symbols
  - Regular expressions
 
 It should be noted here, however, that Ruby is a dynamically-typed language.  As
@@ -34,6 +37,12 @@ type of value using the `.class` method on any value:*
 ```
 *The meaning and syntax of this will be explained later when we discuss Classes
 and Objects.*
+
+### Nil
+
+`nil` is a value which indicates a lack of value.  It is distinct from `false`,
+as it may indicate a variable has not been declared.  For those familiar with
+C-based languages, this is analogous to `null`.
 
 ### Strings
 
@@ -126,6 +135,23 @@ a conversion between less precise types.  For example:
 result = 22.0 / 7
 result.class
 ```
+
+In addition to these operators, there are also cases where one may
+simultaneously perform arithmetic operations while (re)assigning the value to a
+variable.
+
+| Operator | Function |
+| +=       | Add a value to an existing variable and reassign it to the sum |
+| -=       | Subtract a value from an existing variable and reassign it to the result |
+| *=       | Multiply a value with an existing variable and reassign it to the product |
+| /=       | Divide a value with an existing variable and reassign it to the quotient |
+| %=       | Modulo a value with an existing variable and reassign it to the remainder |
+| **=      | Raise an existing value to an exponent and reassign it to the product |
+
+## Booleans
+
+Boolean values model cases where the state is either explicitly true or false.
+The values themselves are either `true` or `false`.
 
 ## Arrays
 
