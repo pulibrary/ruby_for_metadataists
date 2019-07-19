@@ -103,3 +103,36 @@ my_var7 = 50
 puts "my_var7 is greater than 40" if my_var7 > 40
 ```
 
+### Iterating
+
+Building off of what was discussed for Arrays and Hashes in the earlier
+discussion addressing variables, Ruby provides language features which permits
+one to sequentially process the elements of an Array, or the key/value pairs
+within a Hash.
+
+The most straightforward way of approaching this is the usage of the `each`
+method on any Array:
+
+```ruby
+my_set1 = [1,2,3]
+
+my_set1.each do |element|
+  puts "This is the element #{element}"
+end
+```
+
+There are a number of details for this which should be noted.  Firstly, one uses
+the `.` character in order to call the `each` method.  The meaning of the term
+"method" and the usage of `.` will be discussed later when we provide an
+overview for Classes and Objects.  Also, one uses the `do` keyword here in
+ order to initiate a `block` in Ruby.  Not unlike what was seen earlier with the
+`if` conditionals, within these `blocks` there are procedures which perform on
+ the element within the current iteration.
+
+The argument passed to the `block` is provided is wrapped in pipe characters
+(`|`).  This may be different if one is iterating on something other than an
+ Array, for example, a Hash:
+
+```ruby
+my_struct = { color: 'blue', shape: 'round' }
+```
