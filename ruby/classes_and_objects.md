@@ -121,6 +121,8 @@ As one can see, the `add_year` method simply modifies the instance variable.
 Also note that the `return` keyword is explicitly used in the `get_year` method
 in order to return the value of `@year`.
 
+#### Important Point Regarding Ruby
+
 Until this point, one may have noticed that the syntax used to invoke methods on
 Objects has involved the usage of the `.` character.  This should seem familiar
 from the previous lessons, this is how we invoked the `each` method on Arrays
@@ -138,3 +140,84 @@ Hashes, Strings, and even regular expressions (`Regexp` is the name of the
 The `.class` method which was referenced in the first lesson is simple a method
 which returns the Class for any Object in Ruby.
 
+#### Returning to Classes
+
+There are cases in which one may seek to reference the Object itself from within
+a Class.  This is performed using the `self` keyword:
+
+```ruby
+class Car
+
+  def initialize(make, model, year)
+    @make = make
+    @model = model
+    @year = year
+  end
+
+  def get_year()
+    return @year
+  end
+
+  def add_year()
+    @year = @year + 1
+  end
+
+  def get_make()
+    return @make
+  end
+
+  def get_model()
+    return @model
+  end
+
+  def get_make_and_model()
+    return self.get_make() + " " + self.get_model()
+  end
+end
+```
+
+Here, the `get_make_and_model` method invokes both the internal methods
+`get_make` and `get_model` using the `self` keyword.
+
+#### Ruby Idioms
+
+Up until this point, we have provided method definitions in a very explicit
+manner.  However, method definitions need not be so well structured in Ruby:
+
+```ruby
+class Car
+
+  def initialize(make, model, year)
+    @make = make
+    @model = model
+    @year = year
+  end
+
+  def get_year
+    @year
+  end
+
+  def add_year
+    @year = @year + 1
+  end
+
+  def get_make
+    @make
+  end
+
+  def get_model
+    @model
+  end
+
+  def get_make_and_model
+    get_make + " " + get_model
+  end
+```
+
+As seen above, it is not necessary to provide parentheses for method definitions
+when no arguments are specified.  Further, for those cases, invoking the method
+also does not require the usage of parentheses.
+
+Additionally, please note that the keywords `self` and `return` are, in most
+cases, unnecessary and unused.  Methods implicitly return the value of the last
+statement within the method body.
