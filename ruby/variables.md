@@ -187,6 +187,14 @@ Please note here that the second element in the subset is exclusive, and hence
 need to be 1 more than the index of the last element in order to include it in
 the results.
 
+It should be noted that there is another operator which can be used to append
+elements to the end of an Array.  This may be executed with the following:
+
+```ruby
+third_set = [1,2,3]
+third_set << 4
+```
+
 ## Hashes
 
 While Arrays contain elements which are ordered, Ruby also provides a separate
