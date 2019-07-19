@@ -175,6 +175,42 @@ end
 In this example, if the current element is `2`, then the iteration will skip to
 the next element without any further procedures.
 
+#### Transformations and Filters
+
+There also exist in Ruby methods which can be called on entire Arrays which
+either transform or filter the elements of the Array.  Specifically, these are
+the methods `map`, `select`, and `reject`:
+
+```ruby
+my_set2 = [4,5,6]
+my_new_set = my_set2.map { |element| element + 3 }
+```
+
+As one can observe above, `map` provides one with the ability to use a block in
+order to modify the value of each element in the Array.  The output of the Array
+will be the elements after they have been modified by the block.
+
+While `map` consistently generates an output Array equal in length to the input
+Array, the filter methods `select` and `reject` may generate an Array of lesser
+length:
+
+```ruby
+my_set3 = [14,15,16]
+my_new_set = my_set3.select { |element| element < 16 }
+```
+
+In this example, the output Array generated only contains elements which are
+less than 16.  `reject` performs a similar function, but instead uses negation
+for expressions which evaluate to `true`:
+
+```ruby
+my_set3 = [14,15,16]
+my_new_set = my_set3.reject { |element| element >= 16 }
+```
+
+For this case, any element which is greater than or equal to 16 will be filtered
+out of the output Array.
+
 ### Loops
 
 Ruby also offers features supporting loops for iterating through a sequence of
