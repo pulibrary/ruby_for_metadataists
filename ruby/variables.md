@@ -154,4 +154,79 @@ second_set[0]
 second_set[1]
 ```
 
+Negative indices may be used to count backwards from the end of the Array:
+
+```ruby
+second_set[-1]
+second_set[-2]
+```
+
+Should one attempt to access an element in an Array which is out of range, this
+will simply return a `Nil` value:
+
+```ruby
+second_set[99]
+```
+
+One may also attempt to access subsets of elements within an Array using the
+following syntax:
+
+```ruby
+second_set[0,2]
+```
+
+Please note here that the second element in the subset is exclusive, and hence
+need to be 1 more than the index of the last element in order to include it in
+the results.
+
+## Hashes
+
+While Arrays contain elements which are ordered, Ruby also provides a separate
+data type which may contain elements which are unordered, and instead associated
+with a keyword.  These are Hashes, and are often used to represent complex data
+structures:
+
+```ruby
+my_hash = { 'color': 'blue', 'weight': 'heavy' }
+```
+
+In the above example, this Hash would contain the keys `color` and `weight`.  In
+order to retrieve the value associated with each of these keys, one uses
+brackets (much like with Arrays):
+
+```ruby
+my_hash['color']
+my_hash['weight']
+```
+
+Keys and values in Hashes may be of any data type:
+
+```ruby
+my_hash[2.3] = 3.4
+```
+
+Each key is unique, and hence, setting a value multiple times with a same key
+overrides the value:
+
+```ruby
+my_hash[2.3] = 4.5
+my_hash[2.3]
+my_hash[2.3] = 5.6
+my_hash[2.3]
+```
+
+## Symbols
+
+Symbols represent a data type commonly used within Hashes, and essential
+represent a single, unchangeable value.  While working with Strings as Hash keys
+is possible, Strings encapsulate much more information (such as case or length),
+and as such, it is often quite faster to use a symbol:
+
+```ruby
+my_hash[:color] = 'red'
+```
+
+From the standpoint of memory management, Symbols can increase speed and
+efficiency when it comes to the storage and retrieval of values from within
+Hashes.
 
