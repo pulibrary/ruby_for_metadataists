@@ -117,7 +117,7 @@ method on any Array:
 my_set1 = [1,2,3]
 
 my_set1.each do |element|
-  puts "This is the element #{element}"
+  puts "This is the current element in the iteration: #{element}"
 end
 ```
 
@@ -135,4 +135,73 @@ The argument passed to the `block` is provided is wrapped in pipe characters
 
 ```ruby
 my_struct = { color: 'blue', shape: 'round' }
+
+my_struct.each do |key, value|
+
+  puts "This is the current key: #{key}"
+  puts "This is the current value: #{value}"
+end
 ```
+
+For the case of Hashes, `each` uses a block which has two arguments: the key and
+the value for each pair in the Hash.
+
+An alternative notation for iterating through Hashes and Arrays is to use curly
+brackets (`{}`) as opposed to the `do` and `end` keywords.  This is helpful if
+the procedure within the block only consumes one line of space:
+
+```ruby
+
+my_set1 = [1,2,3]
+
+my_set1.each { |element| puts "Current element: #{element}" }
+```
+
+Both approaches are valid, however the usage of curly brackets is a bit less
+wieldy and more difficult to read.
+
+One may also control iterations using the `next` keyword in order to
+handle certain conditions:
+
+```ruby
+my_set1 = [1,2,3]
+
+my_set1.each do |element|
+  next if element == 2
+  puts "This is the current element in the iteration: #{element}"
+end
+```
+
+In this example, if the current element is `2`, then the iteration will skip to
+the next element without any further procedures.
+
+### Loops
+
+Ruby also offers features supporting loops for iterating through a sequence of
+values offered by an Array or Hash.  These use the `while` and `until` keywords:
+
+```ruby
+i = 0
+
+while i < 10
+  i = i + 1
+end
+puts "The loop has finished"
+```
+
+As was the case with `if` and `unless`, `until` provides an implicit negation of
+a condition which would normally be provided to `while`:
+
+```ruby
+i = 0
+
+until i >= 10
+  i = i + 1
+end
+puts "The loop has finished"
+```
+
+In both of these examples, the loop is executed until the condition provided to
+`while` or `until` is fulfilled.  Here, the variable `i` is incremented by `1`
+until it is equal to `10`.
+
