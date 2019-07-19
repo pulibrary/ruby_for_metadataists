@@ -230,3 +230,71 @@ From the standpoint of memory management, Symbols can increase speed and
 efficiency when it comes to the storage and retrieval of values from within
 Hashes.
 
+## Regular Expressions
+
+Regular Expressions are, themselves, a formal language which are used to encode 
+a pattern used to extract information from text.  Like many other programming 
+languages, Ruby offers support for the usage of regular expressions in the 
+parsing and extracting of information stored within Strings.  The syntax of
+Regular Expressions follows a fairly [standardized 
+form](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html),
+however the adaptation for Ruby is a bit more 
+[customized](http://ruby-doc.org/core-2.6.3/Regexp.html).
+
+A regular expression is formed using the following:
+
+```ruby
+/hay/.match('haystack')
+```
+
+If the search for 'hay' is found within the target string, this will yield a
+`MatchData` object as a result.  If this cannot be found, it will yield a `nil`:
+
+```ruby
+/foo/.match('haystack')
+```
+
+Regular expressions become more powerful when metacharacters are used.  Three
+metacharacters which may be employed are `*`, `.`, and `?`.
+
+`*` indicates that the preceding character must be repeated 0 or more times.  
+For example:
+
+```ruby
+/re*d/.match('red')
+/re*d/.match('reed')
+/re*d/.match('yard')
+```
+
+In all cases the `*` finds a match.  In the first case `e` is found once, in the
+second, it is found twice.  For the third case, the `e` is optional for the
+match.
+
+`.` indicates that the preceding character must be repeated 1 or more times.  
+For example:
+
+
+```ruby
+/re.d/.match('read')
+/re.d/.match('red')
+/re.d/.match('reed')
+/re.d/.match('yard')
+```
+
+In these examples, the first and third matches are successful, while the second
+and fourth are not.  `red` does not repeat `e` at least once, and `yard` simply
+does not contain `e` following any `r`.
+
+`?` indicates that the preceding character must be repeated 0 or 1 times (no
+greater):
+
+```ruby
+/chee?s/.match('cheese')
+/chee?s/.match('chess')
+/chee?s/.match('cheeese')
+```
+
+For this example, only the first two matches are successful, as the second `e`
+character is basically just considered to be optional.  Any more than one
+repetition and the match will fail.
+
