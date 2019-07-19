@@ -142,11 +142,11 @@ variable.
 
 | Operator | Function |
 | +=       | Add a value to an existing variable and reassign it to the sum |
-| -=       | Subtract a value from an existing variable and reassign it to the result |
+| -=       | Subtract a value from an existing variable and reassign it to the difference |
 | *=       | Multiply a value with an existing variable and reassign it to the product |
 | /=       | Divide a value with an existing variable and reassign it to the quotient |
-| %=       | Modulo a value with an existing variable and reassign it to the remainder |
-| **=      | Raise an existing value to an exponent and reassign it to the product |
+| %=       | Perform modulo a value with an existing variable and reassign it to the remainder |
+| **=      | Raise an existing value to an exponent and reassign it to the power |
 
 ## Booleans
 
