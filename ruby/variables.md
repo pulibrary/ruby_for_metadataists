@@ -27,6 +27,14 @@ such, variables are not strictly bound to any data type.  In other words, a
 variable may be declared and assigned a String value, but then later assigned a
 Number value.
 
+*Note: For the purposes of introducing data types in Ruby, one may inspect the
+type of value using the `.class` method on any value:*
+```ruby
+"my string".class
+```
+*The meaning and syntax of this will be explained later when we discuss Classes
+and Objects.*
+
 ### Strings
 
 Strings are a data type which provide users with the ability to store a sequence
@@ -187,7 +195,7 @@ with a keyword.  These are Hashes, and are often used to represent complex data
 structures:
 
 ```ruby
-my_hash = { 'color': 'blue', 'weight': 'heavy' }
+my_hash = { 'color' => 'blue', 'weight' => 'heavy' }
 ```
 
 In the above example, this Hash would contain the keys `color` and `weight`.  In
@@ -228,7 +236,16 @@ my_hash[:color] = 'red'
 
 From the standpoint of memory management, Symbols can increase speed and
 efficiency when it comes to the storage and retrieval of values from within
-Hashes.
+Hashes.  There is also shorthand syntax available for declaring Hash values when
+using Symbols for keys:
+
+```ruby
+my_hash = { :color => 'red'  }
+my_hash2 = { color: 'red' }
+```
+
+Please note that this syntax *only* applies to cases when Symbols are used as
+keys.
 
 ## Regular Expressions
 
