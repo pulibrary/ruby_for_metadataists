@@ -51,7 +51,6 @@ of characters (a "character string").  These may or may not be terminated with a
 newline and/or carriage return:
 
 ```ruby
-
 first_string = "foo"
 second_string = "bar"
 ```
@@ -59,7 +58,6 @@ second_string = "bar"
 Strings may be concatenated with the `+` operator:
 
 ```ruby
-
 third_string = first_string + second_string
 ```
 
@@ -84,13 +82,12 @@ Integers alone (regardless of sign) are stored using `Fixnum` types, while more
 precision could be found using the `Float` or `Complex` types:
 
 ```ruby
-
 33.class
 7.8.class
 3.to_c.class
 ```
 
-Arithmetic operations
+### Arithmetic operations
 
 | Operator | Function |
 | -------- | -------- |
@@ -111,6 +108,8 @@ result = 22.0 / 7
 result.class
 ```
 
+### Assignment operators
+
 In addition to these operators, there are also cases where one may
 simultaneously perform arithmetic operations while (re)assigning the value to a
 variable.
@@ -119,15 +118,24 @@ variable.
 | -------- | -------- |
 | u += n   | Add a value to an existing variable and reassign it to the sum |
 | u -= n   | Subtract a value from an existing variable and reassign it to the difference |
-| u *= n   | Multiply a value with an existing variable and reassign it to the product |
+| u \*= n   | Multiply a value with an existing variable and reassign it to the product |
 | u /= n   | Divide a value with an existing variable and reassign it to the quotient |
 | u %= n   | Perform modulo a value with an existing variable and reassign it to the remainder |
-| u **= n  | Raise an existing value to an exponent and reassign it to the power |
+| u \*\*= n  | Raise an existing value to an exponent and reassign it to the power |
 
 ## Booleans
 
 Boolean values model cases where the state is either explicitly true or false.
 The values themselves are either `true` or `false`.
+
+### Negation Operator
+
+One can readily invert the boolean value using the `!` operator.  For example:
+
+```ruby
+my_value = false
+!my_value
+```
 
 ## Arrays
 
@@ -188,6 +196,8 @@ second_set[0,2]
 Please note here that the second element in the subset is exclusive, and hence
 need to be 1 more than the index of the last element in order to include it in
 the results.
+
+### Shovel Operator
 
 It should be noted that there is another operator which can be used to append
 elements to the end of an Array.  This may be executed with the following:
