@@ -91,12 +91,12 @@ precision could be found using the `Float` or `Complex` types:
 
 | Operator | Function |
 | -------- | -------- |
-| u + v    | Addition |
-| u - v    | Subtraction |
-| u * v    | Multiplication |
-| u / v    | Division |
-| u \*\* v   | Exponentiation |
-| u % v    | Modulo<sup>1</sup> |
+| `u + v`    | Addition |
+| `u - v`   | Subtraction |
+| `u * v`    | Multiplication |
+| `u / v`    | Division |
+| `u ** v`   | Exponentiation |
+| `u % v`    | Modulo<sup>1</sup> |
 
 <sup>1</sup>_The remainder after division_
 
@@ -116,12 +116,12 @@ variable.
 
 | Operator | Function |
 | -------- | -------- |
-| u += n   | Add a value to an existing variable and reassign it to the sum |
-| u -= n   | Subtract a value from an existing variable and reassign it to the difference |
-| u \*= n   | Multiply a value with an existing variable and reassign it to the product |
-| u /= n   | Divide a value with an existing variable and reassign it to the quotient |
-| u %= n   | Perform modulo a value with an existing variable and reassign it to the remainder |
-| u \*\*= n  | Raise an existing value to an exponent and reassign it to the power |
+| `u += n`   | Add a value to an existing variable and reassign it to the sum |
+| `u -= n`   | Subtract a value from an existing variable and reassign it to the difference |
+| `u *= n`   | Multiply a value with an existing variable and reassign it to the product |
+| `u /= n`   | Divide a value with an existing variable and reassign it to the quotient |
+| `u %= n`   | Perform modulo a value with an existing variable and reassign it to the remainder |
+| `u **= n`  | Raise an existing value to an exponent and reassign it to the power |
 
 ## Booleans
 
