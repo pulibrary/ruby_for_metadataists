@@ -92,41 +92,16 @@ precision could be found using the `Float` or `Complex` types:
 
 Arithmetic operations
 
-Addition:
+| Operator | Function |
+| -------- | -------- |
+| u + v    | Addition |
+| u - v    | Subtraction |
+| u * v    | Multiplication |
+| u / v    | Division |
+| u \*\* v   | Exponentiation |
+| u % v    | Modulo<sup>1</sup> |
 
-```ruby
-u + v
-```
-
-Subtraction:
-
-```ruby
-u - v
-```
-
-Multiplication:
-
-```ruby
-u * v
-```
-
-Division:
-
-```ruby
-u / v
-```
-
-Exponentiation:
-
-```ruby
-u ** v
-```
-
-Modulo (Remainder after division):
-
-```
-u % v
-```
+<sup>1</sup>_The remainder after division_
 
 It should be noted that the more precise data type takes precedence, and forces
 a conversion between less precise types.  For example:
@@ -141,12 +116,13 @@ simultaneously perform arithmetic operations while (re)assigning the value to a
 variable.
 
 | Operator | Function |
-| +=       | Add a value to an existing variable and reassign it to the sum |
-| -=       | Subtract a value from an existing variable and reassign it to the difference |
-| *=       | Multiply a value with an existing variable and reassign it to the product |
-| /=       | Divide a value with an existing variable and reassign it to the quotient |
-| %=       | Perform modulo a value with an existing variable and reassign it to the remainder |
-| **=      | Raise an existing value to an exponent and reassign it to the power |
+| -------- | -------- |
+| u += n   | Add a value to an existing variable and reassign it to the sum |
+| u -= n   | Subtract a value from an existing variable and reassign it to the difference |
+| u *= n   | Multiply a value with an existing variable and reassign it to the product |
+| u /= n   | Divide a value with an existing variable and reassign it to the quotient |
+| u %= n   | Perform modulo a value with an existing variable and reassign it to the remainder |
+| u **= n  | Raise an existing value to an exponent and reassign it to the power |
 
 ## Booleans
 
