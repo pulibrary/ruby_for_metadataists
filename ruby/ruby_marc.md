@@ -108,3 +108,26 @@ marc_fields = marc_values["fields"]
 marc_fields.first
 ```
 
+### Writing MARC Records to Files
+
+Using a `MARC::Record` Object, there are two fairly straightforward approaches
+to writing MARC records in a file:
+
+```ruby
+reader = MARC::Reader.new('ruby/4609321.dat', external_encoding: "UTF-8")
+records = reader.to_a
+first_record = records.first
+
+writer = MARC::Writer.new('new_marc_record.dat')
+writer.write(first_record)
+writer.close()
+```
+
+It is also possible to write the MARC record in XML:
+
+```ruby
+xml_writer = MARC::XMLWriter.new('new_marc_record.mrx')
+xml_writer.write(first_record)
+xml_writer.close()
+```
+
