@@ -207,6 +207,16 @@ third_set = [1,2,3]
 third_set << 4
 ```
 
+### Comparing Arrays
+
+Ruby also offers the `<=>` (spaceship) operator in order to compare the value of
+each element in the Array.  This is accomplished by iterating through each
+element.  Should the values of the current elements be identical, this
+operator returns `0`.  Should the value of the current element in the first
+Array in the comparison be less than the current element in the second, it
+returns `-1`.  If the current element in the first Array is greater, it returns
+`1`.
+
 ## Hashes
 
 While Arrays contain elements which are ordered, Ruby also provides a separate
@@ -217,6 +227,8 @@ structures:
 ```ruby
 my_hash = { 'color' => 'blue', 'weight' => 'heavy' }
 ```
+
+_Note: For reference, the `=>` operator is known as the "hash rocket" operator._
 
 In the above example, this Hash would contain the keys `color` and `weight`.  In
 order to retrieve the value associated with each of these keys, one uses
