@@ -64,11 +64,25 @@ first_record = records.first
 marc_field = first_record["700"]
 ```
 
+### Control Fields
+Control fields are provided with their own first-order Class, but are retrieved
+simply by selecting the appropriate control tags:
+
+```ruby
+control_field = first_record["008"]
+control_field.tag
+ => "008"
+control_field.value
+ => "051027s1456    gw            000 0 lat d"
+```
+
 Fields contain the following attributes storing the tag, two indicators, and the
 subfields:
 ```ruby
 marc_field.tag
  => "700"
+marc_field.value
+ => "Gutenberg, Johann,1397?-1468,printer.http://id.loc.gov/authorities/names/n50034916"
 marc_field.indicator1
  => "1"
 marc_field.indicator2
