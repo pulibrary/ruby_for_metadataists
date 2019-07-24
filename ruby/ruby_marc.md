@@ -76,7 +76,8 @@ control_field.value
  => "051027s1456    gw            000 0 lat d"
 ```
 
-Fields contain the following attributes storing the tag, two indicators, and the
+### Variable Fields
+Variable fields (010 through 999) contain the following attributes storing the tag, two indicators, and the
 subfields:
 ```ruby
 marc_field.tag
@@ -154,4 +155,3 @@ xml_writer = MARC::XMLWriter.new('new_marc_record.mrx')
 xml_writer.write(first_record)
 xml_writer.close()
 ```
-
