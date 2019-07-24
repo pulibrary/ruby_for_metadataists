@@ -45,6 +45,16 @@ Alternatively, one is also able to parse MARC-XML records:
 reader = MARC::XMLReader.new('ruby/4609321.xml')
 ```
 
+## Accessing MARC Leaders
+
+Accessing the MARC leader is relatively straightforward, as there exists a
+`leader` method:
+```ruby
+records = reader.to_a
+first_record = records.first
+first_record.leader
+```
+
 ## Accessing MARC Field Data
 
 Fields are accessed using the MARC tags as one would keys for Hashes:
