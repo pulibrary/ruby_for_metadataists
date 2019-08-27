@@ -75,7 +75,7 @@ yournetid@ruby-office1:~$ less /etc/motd
 ```
 On files smaller than your screen `cat` and `more` work the same way; they differ on how they display files longer than the length of your terminal.
 
-A `cat cli_workshop/data_files/22631-0.txt` will display the entire contents of the file on your screen at once. `less` is modeled on `more` which is an earlier implementation. However, more has fewer features, and you probably shouldn’t bother with it. So, always remember: *less is more*.
+A `cat command_line_intro/data_files/22631-0.txt` will display the entire contents of the file on your screen at once. `less` is modeled on `more` which is an earlier implementation. However, more has fewer features, and you probably shouldn’t bother with it. So, always remember: *less is more*.
 
 ## cp: Copy Files
 
@@ -106,10 +106,10 @@ Let's make a few copies of the document by launching our terminal.
 
 ```bash
 yournetid@ruby-office1:~$ ls
-cli_workshop  Desktop  Templates
-yournetid@ruby-office1:~$ cp cli_workshop/data_files/22631-0.txt .
+command_line_intro  Desktop  Templates
+yournetid@ruby-office1:~$ cp command_line_intro/data_files/22631-0.txt .
 yournetid@ruby-office1:~$ ls
-22631-0.txt  cli_workshop  Desktop  Templates
+22631-0.txt  command_line_intro  Desktop  Templates
 ```
 In order we:
 
@@ -120,7 +120,7 @@ In order we:
 However, if the destination is in another directory, the named directory must already exist. Otherwise, the cp command will respond with an error:
 
 ```bash
-yournetid@ruby-office1:~$ cp cli_workshop/data_files/22631-0.txt gutenberg_books/22631-0.txt
+yournetid@ruby-office1:~$ cp command_line_intro/data_files/22631-0.txt gutenberg_books/22631-0.txt
 cp: cannot create regular file `gutenberg_books/22631-0.txt`: No such file or directory
 ```
 
@@ -219,7 +219,7 @@ The `ls -l` command shows these permissions in order by user, group and others:
 yournetid@ruby-office1:~$ ls -l
 total 928
 -rw-rw-r-- 1 yournetid yournetid 927212 Jul 20 13:17 22631-0.txt
-drwxrwxr-x 4 yournetid yournetid   4096 Jul 19 18:35 cli_workshop
+drwxrwxr-x 4 yournetid yournetid   4096 Jul 19 18:35 command_line_intro
 drwx------ 2 yournetid yournetid   4096 Jul 17 17:38 Desktop
 drwxrwxr-x 2 yournetid yournetid   4096 Jul 17 13:17 Templates
 ```

@@ -16,8 +16,8 @@ Examples usage:
 
 ```bash
 yournetid@ruby-office1:~$ sed --help
-yournetid@ruby-office1:~$ sed s/BSD// < ~/cli_workshop/data_files/operatingsystemlist
-yournetid@ruby-office1:~$ sed s/BSD//g < ~/cli_workshop/data_files/operatingsystemlist
-yournetid@ruby-office1:~$ sed s/BSD//g < ~/cli_workshop/data_files/operatingsystemlist > nobsdlist
-yournetid@ruby-office1:~$ sed -n '/BSD/ p' ~/cli_workshop/data_files/operatingsystemlist
+yournetid@ruby-office1:~$ sed s/BSD// < ~/command_line_intro/data_files/operatingsystemlist
+yournetid@ruby-office1:~$ sed s/BSD//g < ~/command_line_intro/data_files/operatingsystemlist
+yournetid@ruby-office1:~$ sed s/BSD//g < ~/command_line_intro/data_files/operatingsystemlist > nobsdlist
+yournetid@ruby-office1:~$ sed -n '/BSD/ p' ~/command_line_intro/data_files/operatingsystemlist
 ```
