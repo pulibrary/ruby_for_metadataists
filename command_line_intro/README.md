@@ -38,5 +38,4 @@
       * [rsync](sec7/rsync.md)
   1. [jq](jsonjq.md)
   1. [csvkit](csvkit.md)
-  1. [Catmandu](catmandu.md)
   1. piknik
