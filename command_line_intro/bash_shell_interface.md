@@ -1,6 +1,6 @@
-# C Shell Interface
+# Bash Shell Interface
 
-The C shell (csh) is the interface to the Unix system and is responsible for interpreting your keyboard input. When you log into a Unix system, the shell is started and runs until your log out of the system. The shell as a powerful program allowing:
+The bash shell (bash) is the interface to the ruby-office1 system and is responsible for interpreting your keyboard input. When you log into a Unix system, the shell is started and runs until your log out of the system. The shell as a powerful program allowing:
 
 1. Connection of the output of one command as input to a second command
 1. The output of commands to be sent to files
@@ -21,7 +21,7 @@ Every command has three "files" associated with it called **standard input, stan
 
 ### file redirection
 
-The C shell interprets the following symbols as the file redirection symbols:
+The bash shell interprets the following symbols as the file redirection symbols:
 
 * `<` : Use file as standard input
 * `>` : Use file as standard output
@@ -72,7 +72,7 @@ yournetid@ruby-office1:~$ alias whereami='ls al && pwd'
 ```
 after that every time we type the command `whereami` it would display the same results of the two commands `ls -al` and `pwd`. `alias` is used on commands that a user uses frequently.
 
-### c shell variables
+### bash shell variables
 
 Several variables are associated exclusively with the C shell. User the `set` command to assign values to these variables. The format of the `set` command is:
 
@@ -94,7 +94,7 @@ Another variable I find useful to set is the `history` variable. The C shell rem
 yournetid@ruby-office1:~$ set history = 2000
 ```
 
-Let's see what commands we have run on the VM
+Let's see what commands we have run on the server
 
 ```bash
 yournetid@ruby-office1:~$ history
