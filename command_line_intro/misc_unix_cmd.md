@@ -12,7 +12,7 @@ The commands we will look at is:
 6. `wc` : Display number of lines, words, and characters in a file
 7. `sudo` : Execute a command as another user
 7. `script` : Record terminal in a file
-8. Miscallaneous Games
+8. Miscellaneous Games
 9. `uptime`: Show system load and system status
 10. `du` : Disk usage
 12. `find` : Find a file in the file system
