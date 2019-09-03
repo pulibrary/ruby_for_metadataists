@@ -1,8 +1,6 @@
 # getting in and out
 
-To use our ruby-office1 system you must log in with a username and password. For this workshop you will have a virtual machine with your princeton netid and a public key.
-
-For our first exercise let's change the password by typing the following
+To use our ruby-office1 system you must log in with a username and public key. For this workshop you will have a virtual machine with your princeton netid and a public key.
 
 ## online help
 
