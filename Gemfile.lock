@@ -1,7 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    json (2.2.0)
     mini_portile2 (2.4.0)
+    multipart-post (2.1.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
 
@@ -9,6 +13,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday (= 0.15.4)
+  json
   nokogiri
 
 BUNDLED WITH
