@@ -1,14 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    marc (1.0.4)
+      scrub_rb (>= 1.0.1, < 2)
+      unf
     mini_portile2 (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    scrub_rb (1.0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  marc
   nokogiri
 
 BUNDLED WITH
