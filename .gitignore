@@ -1,0 +1,4 @@
+.DS_Store
+/marc/*.mrc
+/marc/*.xml
+/tmp/*.yml
